@@ -21,7 +21,7 @@ Spring::Spring(MassPoint& anchor, MassPoint& exterior):
 void Spring::Update()
 {
 	//get timesp
-	_TimeSP = DrawAgent::getInstance().DeltaTime()*10;
+	_TimeSP = DrawAgent::getInstance().DeltaTime()*50;
 
 	//calcular spring
 	_Spring = _Exterior <<= _Anchor;

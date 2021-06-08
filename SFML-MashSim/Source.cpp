@@ -13,28 +13,21 @@ int main()
 	SoftBody obj(5, { 400 ,300 }, 200.0f);
 	obj.init();
 
-
 	while (DrawAgent::getInstance().isOpen())
 	{
-
 		DrawAgent::getInstance().handleEvents();
-
 
 		obj.update();
 
 		DrawAgent::getInstance().Clear();
+
 		DrawAgent::getInstance().Draw(obj);
+
 		DrawAgent::getInstance().Draw(center);
 
 		DrawAgent::getInstance().Display();
 
-
-
 	}
-
-
-
-
 
 	return 0;
 }
