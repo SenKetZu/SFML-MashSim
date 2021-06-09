@@ -11,11 +11,12 @@ public:
 	void init();
 	void build();
 	void update();
-	sf::ConvexShape draw();
+	sf::VertexArray draw();
 
 
 private:
-	sf::ConvexShape			_Body;
+	sf::Color				_BDcolor;
+	sf::VertexArray			_Body;
 	std::vector<Spring>		_Springs;
 	std::vector<MassPoint>	_Bordes;
 	MassPoint				_Centro;

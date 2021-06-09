@@ -5,7 +5,7 @@ Spring::Spring(MassPoint& anchor, MassPoint& exterior):
 	_Anchor(anchor),
 	_Exterior(exterior),
 	_Spring(exterior<<=anchor),
-	_SpringLenght(20.0f),
+	_SpringLenght(100.0f),
 	_K(10.0f),
 	_Damping(1.0f),
 	_TimeSP(.01f),
@@ -21,7 +21,7 @@ Spring::Spring(MassPoint& anchor, MassPoint& exterior):
 void Spring::Update()
 {
 	//get timesp
-	_TimeSP = DrawAgent::getInstance().DeltaTime()*50;
+	_TimeSP = DrawAgent::getInstance().DeltaTime()*100.0f;
 
 	//calcular spring
 	_Spring = _Exterior <<= _Anchor;

@@ -3,7 +3,7 @@
 DrawAgent::DrawAgent():
 	_Screen(sf::VideoMode({ 800,600 }), "Mesh", sf::Style::Default)
 {
-	_Screen.setFramerateLimit(60);
+	
 }
 
 void DrawAgent::Draw(const sf::Drawable& drawable)
@@ -35,10 +35,12 @@ float DrawAgent::DeltaTime()
 bool DrawAgent::isOpen()
 {
 	return _Screen.isOpen();
+	_Screen.setFramerateLimit(60);
 }
 
 void DrawAgent::handleEvents()
 {
+	
 	sf::Event Evento;
 	while (_Screen.pollEvent(Evento))
 	{
@@ -47,6 +49,7 @@ void DrawAgent::handleEvents()
 			_Screen.close();
 		}
 	}
+	
 }
 
 

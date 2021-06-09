@@ -45,12 +45,12 @@ sf::Vector2f	MathVector::getComponents()
 
 void			MathVector::normalize()
 {
-	_Magnitud = 1;
+	_Magnitud = 1.0f;
 }
 
 MathVector		MathVector::perpendicular()
 {
-	Angle cuart('d', 90);
+	Angle cuart('d', 90.0f);
 	return MathVector(1, (_Angle + cuart));
 }
 

@@ -2,7 +2,7 @@
 
 //Public
 	//Construct
-Angle::Angle() :_Value(1)
+Angle::Angle() :_Value(1.0f)
 {
 }
 
@@ -103,14 +103,14 @@ void Angle::operator/=(float num)
 
 void Angle::rectifyValue()
 {
-	if (_Value >  2*PI)
+	if (_Value >  2.0f*PI)
 	{
 		_Value -= 2* PI;
 		rectifyValue();
 	}
 	if (_Value < 0)
 	{
-		_Value += 2*PI;
+		_Value += 2.0f*PI;
 		rectifyValue();
 	}
 	return;
