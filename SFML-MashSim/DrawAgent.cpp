@@ -38,6 +38,11 @@ bool DrawAgent::isOpen()
 	_Screen.setFramerateLimit(60);
 }
 
+sf::Vector2f DrawAgent::MouseXY()
+{
+	return sf::Vector2f(sf::Mouse::getPosition(_Screen));
+}
+
 void DrawAgent::handleEvents()
 {
 	

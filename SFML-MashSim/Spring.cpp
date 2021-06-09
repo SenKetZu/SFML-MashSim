@@ -29,7 +29,7 @@ void Spring::Update()
 	//calculo de fuerzas
 	_SpringForce = _K * (_Spring.getMagnitude() - _SpringLenght);
 	_DampForce = _Damping * _Vel;
-	_Force = _SpringForce +1 /*massXgrav*/ - _DampForce;
+	_Force = _SpringForce +10 /*massXgrav*/ - _DampForce;
 	_Accel = _Force / 1 /*mass*/;
 	_Vel += _Accel * _TimeSP;
 

@@ -17,6 +17,7 @@ public:
 	void				Display();
 	float				DeltaTime();
 	bool				isOpen();
+	sf::Vector2f		MouseXY();
 
 	void				handleEvents();
 private:

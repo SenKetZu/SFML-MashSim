@@ -11,14 +11,19 @@ int main()
 	center.setRadius(2);
 	center.setOrigin({ 2 ,2 });
 	center.setFillColor(sf::Color::Green);
-	center.setPosition(400, 300);
-	SoftBody obj(5, { 400 ,300 }, 200.0f);
+	center.setPosition(300, 300);
+	SoftBody obj(5000, center.getPosition(), 50.0f);
 	obj.init();
 
 	while (DrawAgent::getInstance().isOpen())
 	{
 		DrawAgent::getInstance().handleEvents();
 
+		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+		{
+			obj.moveTo(DrawAgent::getInstance().MouseXY());
+			center.setPosition(DrawAgent::getInstance().MouseXY());
+		}
 		obj.update();
 
 		DrawAgent::getInstance().Clear();

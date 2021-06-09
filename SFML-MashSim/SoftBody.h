@@ -11,6 +11,7 @@ public:
 	void init();
 	void build();
 	void update();
+	void moveTo(sf::Vector2f pos);
 	sf::VertexArray draw();
 
 
